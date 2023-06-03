@@ -1,0 +1,36 @@
+{
+  "name": "tsLab",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "author": "Lisk",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "npm run clean && tsc && concurrently \"tsc -w\" \"tsc-alias -w\"",
+    "build": "npm run clean && tsc && tsc-alias",
+    "release": "npm run build && npm publish --access public",
+    "lint": "eslint --ext .js,.json,.ts, .",
+    "lint:fix": "eslint --fix --ext .js,.json,.ts, .",
+    "clean": "rimraf lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "engines": {
+    "node": ">= v14"
+  },
+  "types": "./lib/index.d.ts",
+  "devDependencies": {
+    "@types/node": "^18.16.2",
+    "typescript": "^5.0.4",
+    "@types/eslint": "^8.4.10",
+    "concurrently": "^7.5.0",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-viki-ts": "^0.1.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "tsc-alias": "^1.7.1"
+  }
+}

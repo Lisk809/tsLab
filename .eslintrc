@@ -1,0 +1,14 @@
+{
+  "root": true,
+  "env": {
+    "browser": false,
+    "node":"true"
+  },
+  "extends": ["viki-ts", "plugin:prettier/recommended"],
+  "rules": {
+    "camelcase": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "no-unused-expressions":"off",
+    "complexity":[10, "error"]
+  }
+}
